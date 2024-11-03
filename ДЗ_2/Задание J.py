@@ -9,9 +9,6 @@ def makeprefixsum(list_numbers):
             if list_numbers[i-1]==list_numbers[i-2]:
                 prefixsum[i]=prefixsum[i-1]+1
                 dict_a[prefixsum[i]]=i
-            elif list_numbers[i - 1] < list_numbers[i - 2]:
-                prefixsum[i]=prefixsum[i-1]+1
-                dict_a[prefixsum[i]]=i
             else:
                 prefixsum[i] = prefixsum[i - 1]
         return dict_a, prefixsum
@@ -47,16 +44,9 @@ for i in range(m):
         t = 0
     if prefixsum_sh[p]==prefixsum_sh[kim[t]]:
         dt = kim[t]
-        if i == m - 1:
-            print(dt)
-        else:
-            print(dt, end=" ")
     else:
         dt=dict_sh[prefixsum_sh[p]]
-        if i==m-1:
-            print(dt)
-        else:
-            print(dt, end=" ")
-
-
-
+    if i == m - 1:
+        print(dt)
+    else:
+        print(dt, end=" ")
