@@ -1,5 +1,3 @@
-from inspect import stack
-
 n=int(input())
 list_towns=[int(i) for i in input().split()]
 
